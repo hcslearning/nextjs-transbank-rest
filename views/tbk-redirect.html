@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Pago con Transbank</title>	
+    </head>
+    <body>
+        
+        <form name="transbankForm" id="transbankForm" action="{{ form_action }}" method="post">
+            <input type="hidden" name="token_ws" value="{{ token_ws }}" />
+            <button type="submit">Pagar</button>
+        </form>
+
+        <script type="text/javascript">
+            window.onload = function() {
+                document.forms["transbankForm"].submit();
+            };
+        </script>
+
+    </body>
+</html>
